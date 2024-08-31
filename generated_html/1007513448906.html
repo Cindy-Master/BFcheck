@@ -1,0 +1,591 @@
+
+    <!DOCTYPE html>
+    <html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>玩家武器数据展示</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                padding: 20px;
+            }
+            .grid-container {
+                display: grid;
+                grid-template-columns: repeat(4, 1fr);
+                gap: 20px;
+            }
+            .weapon-container {
+                background-color: black;
+                padding: 20px;
+                border-radius: 10px;
+                box-shadow: 0 0 10px rgba(0,0,0,0.1);
+                text-align: center;
+                color: white; /* 确保文字在黑色背景上可见 */
+            }
+            .weapon-container img {
+                max-width: 100%;
+                height: auto;
+            }
+            .stats {
+                display: flex;
+                justify-content: space-between;
+                margin-top: 10px;
+            }
+            .stats div {
+                width: 45%;
+            }
+        </style>
+    </head>
+    <body>
+    <div class="grid-container">
+    
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/95/63/Type38Arisaka-a1c192e3.png" alt="Type 38 Arisaka Patrol">
+            <h2>Type 38 Arisaka Patrol</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 0.36</p>
+                    <p>Acc: 44.19%</p>
+                    <p>Eff: 1.0215</p>
+                </div>
+                <div>
+                    <p>Kill: 186.0</p>
+                    <p>HS: 29.57%</p>
+                    <p>Time: 518.11 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/56/82/SpringfieldM1903-c8ae5988.png" alt="M1903 Sniper">
+            <h2>M1903 Sniper</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 0.82</p>
+                    <p>Acc: 20.82%</p>
+                    <p>Eff: 1.0914</p>
+                </div>
+                <div>
+                    <p>Kill: 186.0</p>
+                    <p>HS: 81.72%</p>
+                    <p>Time: 227.36 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/105/43/Winchester1895-69d56c0b.png" alt="Russian 1895 Sniper">
+            <h2>Russian 1895 Sniper</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 0.47</p>
+                    <p>Acc: 17.99%</p>
+                    <p>Eff: 1.3883</p>
+                </div>
+                <div>
+                    <p>Kill: 103.0</p>
+                    <p>HS: 79.61%</p>
+                    <p>Time: 217.22 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/69/69/WinchesterM1897-bb453195.png" alt="M97 Trench Gun Backbored">
+            <h2>M97 Trench Gun Backbored</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 5.81</p>
+                    <p>Acc: 124.84%</p>
+                    <p>Eff: 3.6038</p>
+                </div>
+                <div>
+                    <p>Kill: 53.0</p>
+                    <p>HS: 7.55%</p>
+                    <p>Time: 9.13 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/125/44/LewisLMG-832c29e8.png" alt="Lewis Gun Low Weight">
+            <h2>Lewis Gun Low Weight</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 2.93</p>
+                    <p>Acc: 22.02%</p>
+                    <p>Eff: 2.7250</p>
+                </div>
+                <div>
+                    <p>Kill: 40.0</p>
+                    <p>HS: 10.00%</p>
+                    <p>Time: 13.64 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/19/50/Colt1911-ed324bf1.png" alt="M1911">
+            <h2>M1911</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 1.63</p>
+                    <p>Acc: 23.24%</p>
+                    <p>Eff: 2.4516</p>
+                </div>
+                <div>
+                    <p>Kill: 31.0</p>
+                    <p>HS: 12.90%</p>
+                    <p>Time: 18.97 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/118/26/BergmannSchmeisserMP18-761af430.png" alt="MP 18 Trench">
+            <h2>MP 18 Trench</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 3.79</p>
+                    <p>Acc: 23.05%</p>
+                    <p>Eff: 2.5667</p>
+                </div>
+                <div>
+                    <p>Kill: 30.0</p>
+                    <p>HS: 3.33%</p>
+                    <p>Time: 7.91 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/24/11/RemingtonModel1900-e80b885b.png" alt="Model 1900 Factory">
+            <h2>Model 1900 Factory</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 6.33</p>
+                    <p>Acc: 106.17%</p>
+                    <p>Eff: 3.3077</p>
+                </div>
+                <div>
+                    <p>Kill: 26.0</p>
+                    <p>HS: 7.69%</p>
+                    <p>Time: 4.11 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/90/34/Bodeo1889-a62282b6.png" alt="Bodeo 1889">
+            <h2>Bodeo 1889</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 2.41</p>
+                    <p>Acc: 33.33%</p>
+                    <p>Eff: 1.4615</p>
+                </div>
+                <div>
+                    <p>Kill: 13.0</p>
+                    <p>HS: 0.00%</p>
+                    <p>Time: 5.40 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/116/21/GadgetFragmented-8c15152e.png" alt="Frag Grenade">
+            <h2>Frag Grenade</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 20.45</p>
+                    <p>Acc: 64.06%</p>
+                    <p>Eff: 3.4167</p>
+                </div>
+                <div>
+                    <p>Kill: 12.0</p>
+                    <p>HS: 0.00%</p>
+                    <p>Time: 0.59 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/14/24/GadgetBreechgun-f2188c3f.png" alt="AT Rocket Gun">
+            <h2>AT Rocket Gun</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 1.86</p>
+                    <p>Acc: 55.00%</p>
+                    <p>Eff: 2.2000</p>
+                </div>
+                <div>
+                    <p>Kill: 5.0</p>
+                    <p>HS: 20.00%</p>
+                    <p>Time: 2.69 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/69/69/WinchesterM1897-bb453195.png" alt="Hellfighter Trench Shotgun">
+            <h2>Hellfighter Trench Shotgun</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 3.04</p>
+                    <p>Acc: 80.00%</p>
+                    <p>Eff: 1.6000</p>
+                </div>
+                <div>
+                    <p>Kill: 5.0</p>
+                    <p>HS: 0.00%</p>
+                    <p>Time: 1.64 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/80/109/FrommerStop-506df97e.png" alt="Frommer Stop Auto">
+            <h2>Frommer Stop Auto</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 3.65</p>
+                    <p>Acc: 39.19%</p>
+                    <p>Eff: 5.8000</p>
+                </div>
+                <div>
+                    <p>Kill: 5.0</p>
+                    <p>HS: 0.00%</p>
+                    <p>Time: 1.37 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/66/72/YataganSword-be484415.png" alt="Yatagan Sword">
+            <h2>Yatagan Sword</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 32.13</p>
+                    <p>Acc: 33.33%</p>
+                    <p>Eff: 1.0000</p>
+                </div>
+                <div>
+                    <p>Kill: 4.0</p>
+                    <p>HS: 0.00%</p>
+                    <p>Time: 0.12 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/61/86/MaximSMG-c3563db7.png" alt="SMG 08/18 Optical">
+            <h2>SMG 08/18 Optical</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 4.02</p>
+                    <p>Acc: 18.03%</p>
+                    <p>Eff: 2.7500</p>
+                </div>
+                <div>
+                    <p>Kill: 4.0</p>
+                    <p>HS: 25.00%</p>
+                    <p>Time: 1.00 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/61/86/MaximSMG-c3563db7.png" alt="SMG 08/18 Factory">
+            <h2>SMG 08/18 Factory</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 9.18</p>
+                    <p>Acc: 17.86%</p>
+                    <p>Eff: 2.5000</p>
+                </div>
+                <div>
+                    <p>Kill: 4.0</p>
+                    <p>HS: 0.00%</p>
+                    <p>Time: 0.44 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/74/40/GadgetDynamite-b6283212.png" alt="Dynamite">
+            <h2>Dynamite</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 1.01</p>
+                    <p>Acc: 21.43%</p>
+                    <p>Eff: 3.0000</p>
+                </div>
+                <div>
+                    <p>Kill: 3.0</p>
+                    <p>HS: 0.00%</p>
+                    <p>Time: 2.97 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/96/2/Mle1903-a0fe1ec3.png" alt="Mle 1903">
+            <h2>Mle 1903</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 1.27</p>
+                    <p>Acc: 14.29%</p>
+                    <p>Eff: 1.6667</p>
+                </div>
+                <div>
+                    <p>Kill: 3.0</p>
+                    <p>HS: 0.00%</p>
+                    <p>Time: 2.36 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/53/19/GadgetBayonet-35ed4683.png" alt="Bayonet Charge">
+            <h2>Bayonet Charge</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 0.00</p>
+                    <p>Acc: 0.00%</p>
+                    <p>Eff: 1.0000</p>
+                </div>
+                <div>
+                    <p>Kill: 3.0</p>
+                    <p>HS: 0.00%</p>
+                    <p>Time: 0.00 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/82/33/MauserTankgewehr1918-aedf4c56.png" alt="Tankgewehr M1918">
+            <h2>Tankgewehr M1918</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 1.45</p>
+                    <p>Acc: 50.00%</p>
+                    <p>Eff: 1.0000</p>
+                </div>
+                <div>
+                    <p>Kill: 2.0</p>
+                    <p>HS: 50.00%</p>
+                    <p>Time: 1.38 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/75/19/GadgetATGrenade-4b135d46.png" alt="Anti-Tank Grenade">
+            <h2>Anti-Tank Grenade</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 1.24</p>
+                    <p>Acc: 32.50%</p>
+                    <p>Eff: 6.5000</p>
+                </div>
+                <div>
+                    <p>Kill: 2.0</p>
+                    <p>HS: 0.00%</p>
+                    <p>Time: 1.61 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/22/24/GadgetTripWireGrenade-1618bbc3.png" alt="Tripwire Bomb — HE">
+            <h2>Tripwire Bomb — HE</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 0.79</p>
+                    <p>Acc: 10.00%</p>
+                    <p>Eff: 1.0000</p>
+                </div>
+                <div>
+                    <p>Kill: 2.0</p>
+                    <p>HS: 0.00%</p>
+                    <p>Time: 2.54 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/95/61/crossbow-5f3dc5e6.png" alt="Crossbow Launcher — FRG">
+            <h2>Crossbow Launcher — FRG</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 1.96</p>
+                    <p>Acc: 69.23%</p>
+                    <p>Eff: 4.5000</p>
+                </div>
+                <div>
+                    <p>Kill: 2.0</p>
+                    <p>HS: 0.00%</p>
+                    <p>Time: 1.02 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/90/41/GadgetLimpetMine-a6d78b8f.png" alt="Limpet Charge">
+            <h2>Limpet Charge</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 3.63</p>
+                    <p>Acc: 300.00%</p>
+                    <p>Eff: 1.5000</p>
+                </div>
+                <div>
+                    <p>Kill: 2.0</p>
+                    <p>HS: 0.00%</p>
+                    <p>Time: 0.55 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/61/14/BSA_Howell-c3f2e18b.png" alt="Howell Automatic Sniper">
+            <h2>Howell Automatic Sniper</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 4.59</p>
+                    <p>Acc: 20.00%</p>
+                    <p>Eff: 2.0000</p>
+                </div>
+                <div>
+                    <p>Kill: 2.0</p>
+                    <p>HS: 0.00%</p>
+                    <p>Time: 0.44 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/97/41/Browning1917-61290bc9.png" alt="M1917 MG Low Weight">
+            <h2>M1917 MG Low Weight</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 0.93</p>
+                    <p>Acc: 34.48%</p>
+                    <p>Eff: 5.0000</p>
+                </div>
+                <div>
+                    <p>Kill: 2.0</p>
+                    <p>HS: 0.00%</p>
+                    <p>Time: 2.14 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/90/87/GadgetTrooperATGrenade-a6575030.png" alt="Light Anti-Tank Grenade">
+            <h2>Light Anti-Tank Grenade</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 6.08</p>
+                    <p>Acc: 12.50%</p>
+                    <p>Eff: 2.0000</p>
+                </div>
+                <div>
+                    <p>Kill: 2.0</p>
+                    <p>HS: 0.00%</p>
+                    <p>Time: 0.33 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/68/56/GadgetWebleyScottFlaregun-4438a413.png" alt="Flare Gun — Spot">
+            <h2>Flare Gun — Spot</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 0.32</p>
+                    <p>Acc: 132.73%</p>
+                    <p>Eff: 73.0000</p>
+                </div>
+                <div>
+                    <p>Kill: 1.0</p>
+                    <p>HS: 0.00%</p>
+                    <p>Time: 3.12 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/7/30/GadgetWrench-07e2c76d.png" alt="Repair Tool">
+            <h2>Repair Tool</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 0.01</p>
+                    <p>Acc: 0.26%</p>
+                    <p>Eff: 19.0000</p>
+                </div>
+                <div>
+                    <p>Kill: 1.0</p>
+                    <p>HS: 0.00%</p>
+                    <p>Time: 106.36 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/23/91/SjogrenShotgun-e95b3db0.png" alt="Sjögren Inertial Slug">
+            <h2>Sjögren Inertial Slug</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 0.95</p>
+                    <p>Acc: 100.00%</p>
+                    <p>Eff: 2.0000</p>
+                </div>
+                <div>
+                    <p>Kill: 1.0</p>
+                    <p>HS: 0.00%</p>
+                    <p>Time: 1.05 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/82/98/LeeEnfield-52626131.png" alt="SMLE MKIII Infantry">
+            <h2>SMLE MKIII Infantry</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 2.50</p>
+                    <p>Acc: 33.33%</p>
+                    <p>Eff: 1.0000</p>
+                </div>
+                <div>
+                    <p>Kill: 1.0</p>
+                    <p>HS: 0.00%</p>
+                    <p>Time: 0.40 min</p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/116/26/MauserC96CCarbine-741ab77d.png" alt="C96 Carbine">
+            <h2>C96 Carbine</h2>
+            <div class="stats">
+                <div>
+                    <p>KP: 0.10</p>
+                    <p>Acc: 20.00%</p>
+                    <p>Eff: 6.0000</p>
+                </div>
+                <div>
+                    <p>Kill: 1.0</p>
+                    <p>HS: 0.00%</p>
+                    <p>Time: 9.77 min</p>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    </body>
+    </html>
+    
