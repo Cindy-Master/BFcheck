@@ -1,0 +1,2004 @@
+
+    <!DOCTYPE html>
+    <html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>战地1玩家武器数据分析</title>
+        <style>
+            :root { --bg-color: #121212; --card-bg: #1e1e1e; --primary-color: #f7d002; --text-color: #ffffff; --secondary-text: #aaaaaa; --shadow: 0 4px 20px rgba(0,0,0,0.3); --card-radius: 12px; }
+            * { margin: 0; padding: 0; box-sizing: border-box; }
+            body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-color); color: var(--text-color); padding: 30px; line-height: 1.6; }
+            .header { text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+            .header h1 { font-size: 2.5rem; margin-bottom: 10px; color: var(--primary-color); }
+            .header p { color: var(--secondary-text); font-size: 1.1rem; }
+            .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; max-width: 1400px; margin: 0 auto; }
+            .weapon-container { background-color: var(--card-bg); border-radius: var(--card-radius); box-shadow: var(--shadow); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+            .weapon-container:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+            .weapon-image { width: 100%; height: 160px; display: flex; align-items: center; justify-content: center; background: linear-gradient(to right, rgba(0,0,0,0.7), rgba(0,0,0,0.3)); padding: 20px; }
+            .weapon-image img { max-width: 100%; max-height: 120px; object-fit: contain; }
+            .weapon-info { padding: 20px; }
+            .weapon-name { font-size: 1.4rem; font-weight: bold; margin-bottom: 15px; color: var(--primary-color); text-align: center; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+            .stats { display: grid; grid-template-columns: 1fr 1fr; gap: 15px; }
+            .stat-item { display: flex; flex-direction: column; }
+            .stat-label { font-size: 0.85rem; color: var(--secondary-text); margin-bottom: 4px; }
+            .stat-value { font-size: 1.1rem; font-weight: 600; }
+            .highlight { color: var(--primary-color); }
+            .footer { text-align: center; margin-top: 50px; color: var(--secondary-text); font-size: 0.9rem; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+            @media (max-width: 768px) { body { padding: 15px; } .grid-container { grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); gap: 15px; } .header h1 { font-size: 2rem; } }
+        </style>
+    </head>
+    <body>
+    <div class="header">
+        <h1>战地1武器数据分析</h1>
+        <p>详细统计数据与性能指标分析</p>
+    </div>
+    <div class="grid-container">
+    
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/61/86/MaximSMG-c3563db7.png" alt="SMG 08/18 Factory">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">SMG 08/18 Factory</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">1.10</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">347.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">8.50%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">12.97%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">4.8790</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">314.92 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/45/63/Enfield1917-d33fc14d.png" alt="M1917 Enfield Silenced">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">M1917 Enfield Silenced</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.82</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">319.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">19.93%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">56.43%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">1.5831</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">386.86 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/6/34/HotchkissLMG-06defda3.png" alt="M1909 Benét–Mercié Telescopic">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">M1909 Benét–Mercié Telescopic</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.51</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">182.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">5.44%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">12.64%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">5.2418</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">358.80 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/45/63/Enfield1917-d33fc14d.png" alt="M1917 Enfield Infantry">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">M1917 Enfield Infantry</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">1.39</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">142.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">19.62%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">63.38%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">1.3239</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">102.51 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/95/63/Type38Arisaka-a1c192e3.png" alt="Type 38 Arisaka Patrol">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Type 38 Arisaka Patrol</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">1.08</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">120.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">18.90%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">52.50%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">1.1750</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">110.61 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/119/55/MortarAirburst-77c9647f.png" alt="Mortar — AIR">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Mortar — AIR</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">1.04</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">111.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">0.0000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">106.57 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/118/26/BergmannSchmeisserMP18-761af430.png" alt="MP 18 Trench">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">MP 18 Trench</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.83</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">85.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">12.76%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">12.94%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">5.4235</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">102.45 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/8/112/Ross_Mk3-f8900bf5.png" alt="Ross MkIII Marksman">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Ross MkIII Marksman</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">1.02</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">64.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">15.84%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">67.19%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">1.5000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">62.82 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/61/86/Beretta1918-3daab991.png" alt="Automatico M1918 Trench">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Automatico M1918 Trench</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">2.76</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">60.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">34.92%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">10.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">5.1500</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">21.75 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/105/43/Winchester1895-69d56c0b.png" alt="Russian 1895 Sniper">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Russian 1895 Sniper</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.31</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">45.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">14.55%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">33.33%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">1.8889</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">144.77 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/118/26/BergmannSchmeisserMP18-761af430.png" alt="MP 18 Optical">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">MP 18 Optical</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.60</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">44.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">8.57%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">13.64%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">5.7955</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">73.69 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/125/44/LewisLMG-832c29e8.png" alt="Lewis Gun Low Weight">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Lewis Gun Low Weight</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.38</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">43.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">7.44%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">11.63%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">7.3256</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">111.94 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/19/50/Colt1911-ed324bf1.png" alt="M1911">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">M1911</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">1.02</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">42.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">11.48%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">11.90%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">3.8095</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">41.26 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/118/31/CeiRigotti-8ae129e0.png" alt="Cei-Rigotti Optical">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Cei-Rigotti Optical</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.35</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">38.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">9.89%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">15.79%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">3.4211</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">109.23 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/102/65/MauserM1917TrenchCarbine-9a4158a1.png" alt="M1917 Patrol Carbine">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">M1917 Patrol Carbine</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.52</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">37.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">15.76%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">10.81%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">7.6216</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">70.64 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/61/14/BSA_Howell-c3f2e18b.png" alt="Howell Automatic Factory">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Howell Automatic Factory</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.50</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">26.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">7.64%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">19.23%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">3.3462</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">52.07 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/6/34/HotchkissLMG-06defda3.png" alt="M1909 Benét–Mercié Storm">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">M1909 Benét–Mercié Storm</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">1.04</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">25.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">9.58%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">12.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">4.9200</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">24.03 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/74/8/Chauchat-Ribeyrolles-4af8a912.png" alt="RSC SMG Factory">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">RSC SMG Factory</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.97</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">24.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">16.41%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">16.67%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">3.5833</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">24.73 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/0/71/GasserM1870-00471df4.png" alt="Gasser M1870">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Gasser M1870</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">1.00</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">22.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">23.05%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">27.27%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">3.3636</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">21.98 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/127/7/LugerP08-7f07aa2d.png" alt="Red Baron's P08">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Red Baron's P08</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.61</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">20.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">10.68%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">10.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">5.0000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">32.93 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/82/98/LeeEnfield-52626131.png" alt="Lawrence of Arabia's SMLE">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Lawrence of Arabia's SMLE</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">2.01</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">19.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">36.84%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">10.53%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">1.8421</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">9.46 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/75/19/GadgetATGrenade-4b135d46.png" alt="Anti-Tank Grenade">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Anti-Tank Grenade</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.76</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">16.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">32.73%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">3.3750</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">21.03 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/82/98/LeeEnfield-52626131.png" alt="SMLE MKIII Infantry">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">SMLE MKIII Infantry</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">1.53</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">16.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">21.52%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">43.75%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">1.0625</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">10.49 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/14/67/Ribeyrolles-0e43197c.png" alt="Ribeyrolles 1918 Optical">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Ribeyrolles 1918 Optical</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.71</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">13.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">10.28%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">15.38%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">6.4615</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">18.37 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/52/125/M1891CarcanoCarbine-cc7d34a1.png" alt="Carcano M91 Patrol Carbine">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Carcano M91 Patrol Carbine</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.56</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">12.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">36.46%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">33.33%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">2.9167</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">21.55 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/61/86/Beretta1918-3daab991.png" alt="Automatico M1918 Factory">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Automatico M1918 Factory</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.76</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">12.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">8.63%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">16.67%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">5.5833</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">15.86 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/56/110/MauserSelbstladerM1916-c86e8775.png" alt="Selbstlader M1916 Marksman">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Selbstlader M1916 Marksman</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.37</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">11.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">5.71%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">9.09%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">4.0000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">29.81 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/60/20/Barm1918-3c14511c.png" alt="BAR M1918 Trench">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">BAR M1918 Trench</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">1.22</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">11.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">11.98%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">18.18%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">5.0000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">9.00 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/125/44/LewisLMG-832c29e8.png" alt="Lewis Gun Optical">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Lewis Gun Optical</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.51</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">11.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">3.17%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">9.09%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">4.1818</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">21.74 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/119/26/Bergmann1915MG-891af31f.png" alt="MG15 n.A. Low Weight">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">MG15 n.A. Low Weight</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.52</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">11.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">4.81%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">4.9091</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">21.02 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/124/29/GadgetMortar-84e30045.png" alt="Mortar — HE">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Mortar — HE</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.51</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">10.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">0.0000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">19.46 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/2/88/ImprovisedGrenade-fea87071.png" alt="Improvised Grenade">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Improvised Grenade</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">4.69</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">9.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">30.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">7.3333</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">1.92 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/116/21/GadgetFragmented-8c15152e.png" alt="Frag Grenade">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Frag Grenade</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">8.49</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">8.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">35.78%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">4.8750</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">0.94 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/116/60/LMG_08-18-743c1aa8.png" alt="lMG 08/18 Low Weight">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">lMG 08/18 Low Weight</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.18</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">7.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">4.70%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">13.4286</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">37.93 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/82/124/GadgetMine-527cef72.png" alt="Anti-Tank Mine">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Anti-Tank Mine</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.80</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">6.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">14.81%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">2.0000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">7.52 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/56/110/MauserSelbstladerM1916-c86e8775.png" alt="Selbstlader M1916 Factory">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Selbstlader M1916 Factory</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.97</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">6.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">10.76%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">2.8333</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">6.20 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/8/112/Ross_Mk3-f8900bf5.png" alt="Ross MkIII Infantry">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Ross MkIII Infantry</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.87</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">6.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">10.45%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">83.33%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">1.1667</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">6.88 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/43/18/GadgetGas-2bee4386.png" alt="Gas Grenade">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Gas Grenade</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">9.12</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">6.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">165.71%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">19.3333</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">0.66 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/62/103/WinchesterM1907-3e99346c.png" alt="M1907 SL Sweeper">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">M1907 SL Sweeper</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.22</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">5.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">4.22%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">20.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">5.0000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">22.97 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/15/89/MauserGewehr98-f159616f.png" alt="Gewehr 98 Infantry">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Gewehr 98 Infantry</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.60</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">4.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">14.55%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">50.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">2.0000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">6.72 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/95/63/Type38Arisaka-a1c192e3.png" alt="Type 38 Arisaka Infantry">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Type 38 Arisaka Infantry</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">1.70</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">4.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">20.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">75.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">1.5000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">2.36 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/61/86/MaximSMG-c3563db7.png" alt="SMG 08/18 Optical">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">SMG 08/18 Optical</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.90</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">4.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">5.34%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">4.5000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">4.45 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/14/63/GadgetKBullets-0ec1f92a.png" alt="K Bullets">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">K Bullets</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.32</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">3.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">18.75%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">100.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">2.0000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">9.27 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/14/24/GadgetBreechgun-f2188c3f.png" alt="AT Rocket Gun">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">AT Rocket Gun</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.21</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">3.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">20.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">33.33%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">4.0000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">14.20 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/120/80/Mannlicher1895-7850a8ec.png" alt="Gewehr M.95 Marksman">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Gewehr M.95 Marksman</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.26</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">3.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">6.67%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">33.33%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">2.3333</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">11.37 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/69/69/WinchesterM1897-bb453195.png" alt="Hellfighter Trench Shotgun">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Hellfighter Trench Shotgun</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.33</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">2.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">64.10%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">12.5000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">6.13 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/23/91/SjogrenShotgun-e95b3db0.png" alt="Sjögren Inertial Slug">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Sjögren Inertial Slug</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">1.07</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">2.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">14.29%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">50.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">2.5000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">1.88 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/41/68/GadgetShovel-29bc7215.png" alt="Shovel">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Shovel</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">1.38</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">2.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">11.11%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">2.0000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">1.45 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/82/98/LeeEnfield-52626131.png" alt="SMLE MKIII Marksman">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">SMLE MKIII Marksman</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.09</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">2.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">31.71%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">100.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">6.5000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">21.35 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/95/83/SteyrM1912Stock-a1ad884f.png" alt="Maschinenpistole M1912/P.16 Experimental">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Maschinenpistole M1912/P.16 Experimental</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.65</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">2.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">15.15%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">5.0000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">3.08 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/20/32/KolibriPistol-ec20b160.png" alt="Kolibri">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Kolibri</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.60</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">1.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">13.33%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">8.0000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">1.66 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/105/98/GadgetSaber-9762402c.png" alt="Cavalry Sword">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Cavalry Sword</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.00</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">1.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">0.0000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">0.00 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/65/37/GadgetScoutKnife-bf2558ea.png" alt="Combat Knife">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Combat Knife</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.42</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">1.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">2.65%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">3.0000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">2.37 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/120/80/Mannlicher1895-7850a8ec.png" alt="Gewehr M.95 Infantry">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Gewehr M.95 Infantry</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.41</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">1.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">8.51%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">4.0000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">2.46 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/tunguska/120/80/Mannlicher1895-7850a8ec.png" alt="Gewehr M.95 Carbine">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Gewehr M.95 Carbine</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.43</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">1.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">6.06%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">0.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">2.0000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">2.32 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="weapon-container">
+            <div class="weapon-image">
+                <img src="http://eaassets-a.akamaihd.net/battlelog/battlebinary/gamedata/Tunguska/26/102/ThompsonAnnihilatorTr-1a660e74.png" alt="Annihilator Trench">
+            </div>
+            <div class="weapon-info">
+                <h2 class="weapon-name">Annihilator Trench</h2>
+                <div class="stats">
+                    <div class="stat-item">
+                        <span class="stat-label">每分击杀</span>
+                        <span class="stat-value">0.70</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">击杀总数</span>
+                        <span class="stat-value highlight">1.0</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">命中率</span>
+                        <span class="stat-value">7.94%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">爆头率</span>
+                        <span class="stat-value">100.00%</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">效率</span>
+                        <span class="stat-value">10.0000</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-label">使用时间</span>
+                        <span class="stat-value">1.43 分钟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+    <div class="footer">
+        <p>此数据仅供参考，武器性能因使用情境而异 © 2023 战地1数据分析</p>
+    </div>
+    </body>
+    </html>
+    
