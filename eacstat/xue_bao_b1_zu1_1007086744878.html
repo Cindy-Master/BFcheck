@@ -1,0 +1,630 @@
+
+    <!DOCTYPE html>
+    <html lang="zh-CN">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>战地1玩家数据 - xue_bao_b1_zu1</title>
+        <style>
+            :root { --bg-color: #121212; --card-bg: #1e1e1e; --primary-color: #f7d002; --text-color: #ffffff; --secondary-text: #aaaaaa; --shadow: 0 4px 20px rgba(0,0,0,0.3); --card-radius: 12px; }
+            * { margin: 0; padding: 0; box-sizing: border-box; }
+            body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background-color: var(--bg-color); color: var(--text-color); padding: 30px; line-height: 1.6; }
+            .header { text-align: center; margin-bottom: 40px; padding-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+            .header h1 { font-size: 2.5rem; margin-bottom: 10px; color: var(--primary-color); }
+            .header p { color: var(--secondary-text); font-size: 1.1rem; }
+            .summary { background-color: var(--card-bg); padding: 25px; border-radius: var(--card-radius); margin-bottom: 40px; box-shadow: var(--shadow); }
+            .summary h2 { color: var(--primary-color); margin-bottom: 20px; }
+            .summary-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr)); gap: 20px; }
+            .summary-item { padding: 15px; border-radius: 8px; background-color: rgba(0,0,0,0.2); }
+            .summary-item .label { font-size: 0.9rem; color: var(--secondary-text); margin-bottom: 5px; }
+            .summary-item .value { font-size: 1.4rem; font-weight: bold; }
+            .grid-container { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; max-width: 1400px; margin: 0 auto; }
+            .card-container { background-color: var(--card-bg); border-radius: var(--card-radius); box-shadow: var(--shadow); overflow: hidden; transition: transform 0.3s ease, box-shadow 0.3s ease; margin-bottom: 25px; }
+            .card-container:hover { transform: translateY(-5px); box-shadow: 0 10px 30px rgba(0,0,0,0.4); }
+            .card-title { font-size: 1.4rem; font-weight: bold; padding: 15px; color: var(--primary-color); text-align: center; border-bottom: 1px solid rgba(255,255,255,0.1); }
+            .card-content { padding: 20px; }
+            .stats-table { width: 100%; border-collapse: collapse; }
+            .stats-table td { padding: 10px; border-bottom: 1px solid rgba(255,255,255,0.1); }
+            .stats-table td:first-child { color: var(--secondary-text); }
+            .stats-table td:last-child { font-weight: bold; text-align: right; }
+            .highlight { color: var(--primary-color); }
+            .footer { text-align: center; margin-top: 50px; color: var(--secondary-text); font-size: 0.9rem; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1); }
+            .section { margin-bottom: 40px; }
+            .section-title { text-align: center; margin-bottom: 30px; color: var(--primary-color); }
+            @media (max-width: 768px) { body { padding: 15px; } .grid-container { grid-template-columns: 1fr; gap: 15px; } .header h1 { font-size: 2rem; } }
+        </style>
+    </head>
+    <body>
+    <div class="header">
+        <h1>战地1玩家数据分析</h1>
+        <p>EAID: xue_bao_b1_zu1 / PersonaID: 1007086744878</p>
+    </div>
+    
+    <div class="summary">
+        <h2>玩家总览</h2>
+        <div class="summary-grid">
+            <div class="summary-item">
+                <div class="label">总击杀数</div>
+                <div class="value highlight">2996</div>
+            </div>
+            <div class="summary-item">
+                <div class="label">总死亡数</div>
+                <div class="value">746</div>
+            </div>
+            <div class="summary-item">
+                <div class="label">K/D比率</div>
+                <div class="value highlight">0.00</div>
+            </div>
+            <div class="summary-item">
+                <div class="label">每分钟击杀</div>
+                <div class="value highlight">2.90</div>
+            </div>
+            <div class="summary-item">
+                <div class="label">每分钟得分</div>
+                <div class="value">4188.42</div>
+            </div>
+            <div class="summary-item">
+                <div class="label">技能值</div>
+                <div class="value highlight">608.39</div>
+            </div>
+            <div class="summary-item">
+                <div class="label">游戏时间</div>
+                <div class="value">17.22 小时</div>
+            </div>
+            <div class="summary-item">
+                <div class="label">胜场</div>
+                <div class="value">41</div>
+            </div>
+            <div class="summary-item">
+                <div class="label">败场</div>
+                <div class="value">28</div>
+            </div>
+            <div class="summary-item">
+                <div class="label">最高连杀</div>
+                <div class="value highlight">26</div>
+            </div>
+            <div class="summary-item">
+                <div class="label">命中率</div>
+                <div class="value">23.26%</div>
+            </div>
+            <div class="summary-item">
+                <div class="label">爆头数</div>
+                <div class="value highlight">313</div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">兵种数据</h2>
+        <div class="grid-container">
+    
+        <div class="card-container">
+            <div class="card-title">侦察兵</div>
+            <div class="card-content">
+                <table class="stats-table">
+                    <tr>
+                        <td>得分</td>
+                        <td>4770</td>
+                    </tr>
+                    <tr>
+                        <td>击杀</td>
+                        <td class="highlight">7</td>
+                    </tr>
+                    <tr>
+                        <td>使用时间</td>
+                        <td>0.12 小时</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card-title">突击兵</div>
+            <div class="card-content">
+                <table class="stats-table">
+                    <tr>
+                        <td>得分</td>
+                        <td>371979</td>
+                    </tr>
+                    <tr>
+                        <td>击杀</td>
+                        <td class="highlight">594</td>
+                    </tr>
+                    <tr>
+                        <td>使用时间</td>
+                        <td>3.85 小时</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card-title">支援兵</div>
+            <div class="card-content">
+                <table class="stats-table">
+                    <tr>
+                        <td>得分</td>
+                        <td>247582</td>
+                    </tr>
+                    <tr>
+                        <td>击杀</td>
+                        <td class="highlight">208</td>
+                    </tr>
+                    <tr>
+                        <td>使用时间</td>
+                        <td>1.70 小时</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card-title">医疗兵</div>
+            <div class="card-content">
+                <table class="stats-table">
+                    <tr>
+                        <td>得分</td>
+                        <td>983510</td>
+                    </tr>
+                    <tr>
+                        <td>击杀</td>
+                        <td class="highlight">2043</td>
+                    </tr>
+                    <tr>
+                        <td>使用时间</td>
+                        <td>10.64 小时</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card-title">飞行员</div>
+            <div class="card-content">
+                <table class="stats-table">
+                    <tr>
+                        <td>得分</td>
+                        <td>100</td>
+                    </tr>
+                    <tr>
+                        <td>击杀</td>
+                        <td class="highlight">0</td>
+                    </tr>
+                    <tr>
+                        <td>使用时间</td>
+                        <td>0.01 小时</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card-title">坦克兵</div>
+            <div class="card-content">
+                <table class="stats-table">
+                    <tr>
+                        <td>得分</td>
+                        <td>52732</td>
+                    </tr>
+                    <tr>
+                        <td>击杀</td>
+                        <td class="highlight">0</td>
+                    </tr>
+                    <tr>
+                        <td>使用时间</td>
+                        <td>0.80 小时</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card-title">骑兵</div>
+            <div class="card-content">
+                <table class="stats-table">
+                    <tr>
+                        <td>得分</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>击杀</td>
+                        <td class="highlight">0</td>
+                    </tr>
+                    <tr>
+                        <td>使用时间</td>
+                        <td>0.00 小时</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">游戏模式数据</h2>
+        <div class="grid-container">
+    
+        <div class="card-container">
+            <div class="card-title">征服</div>
+            <div class="card-content">
+                <table class="stats-table">
+                    <tr>
+                        <td>胜场</td>
+                        <td class="highlight">28</td>
+                    </tr>
+                    <tr>
+                        <td>败场</td>
+                        <td>22</td>
+                    </tr>
+                    <tr>
+                        <td>得分</td>
+                        <td>203975</td>
+                    </tr>
+                    <tr>
+                        <td>胜/负比</td>
+                        <td class="highlight">1.27</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card-title">支配</div>
+            <div class="card-content">
+                <table class="stats-table">
+                    <tr>
+                        <td>胜场</td>
+                        <td class="highlight">1</td>
+                    </tr>
+                    <tr>
+                        <td>败场</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>得分</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>胜/负比</td>
+                        <td class="highlight">1.00</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card-title">行动</div>
+            <div class="card-content">
+                <table class="stats-table">
+                    <tr>
+                        <td>胜场</td>
+                        <td class="highlight">6</td>
+                    </tr>
+                    <tr>
+                        <td>败场</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>得分</td>
+                        <td>31500</td>
+                    </tr>
+                    <tr>
+                        <td>胜/负比</td>
+                        <td class="highlight">1.00</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card-title">突破</div>
+            <div class="card-content">
+                <table class="stats-table">
+                    <tr>
+                        <td>胜场</td>
+                        <td class="highlight">6</td>
+                    </tr>
+                    <tr>
+                        <td>败场</td>
+                        <td>6</td>
+                    </tr>
+                    <tr>
+                        <td>得分</td>
+                        <td>31500</td>
+                    </tr>
+                    <tr>
+                        <td>胜/负比</td>
+                        <td class="highlight">1.00</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card-title">突袭</div>
+            <div class="card-content">
+                <table class="stats-table">
+                    <tr>
+                        <td>胜场</td>
+                        <td class="highlight">0</td>
+                    </tr>
+                    <tr>
+                        <td>败场</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>得分</td>
+                        <td>50</td>
+                    </tr>
+                    <tr>
+                        <td>胜/负比</td>
+                        <td class="highlight">0.00</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card-title">前线</div>
+            <div class="card-content">
+                <table class="stats-table">
+                    <tr>
+                        <td>胜场</td>
+                        <td class="highlight">4</td>
+                    </tr>
+                    <tr>
+                        <td>败场</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>得分</td>
+                        <td>15800</td>
+                    </tr>
+                    <tr>
+                        <td>胜/负比</td>
+                        <td class="highlight">4.00</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card-title">团队死斗</div>
+            <div class="card-content">
+                <table class="stats-table">
+                    <tr>
+                        <td>胜场</td>
+                        <td class="highlight">2</td>
+                    </tr>
+                    <tr>
+                        <td>败场</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>得分</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>胜/负比</td>
+                        <td class="highlight">2.00</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">载具数据</h2>
+        <div class="grid-container">
+    
+        <div class="card-container">
+            <div class="card-title">固定武器</div>
+            <div class="card-content">
+                <table class="stats-table">
+                    <tr>
+                        <td>击杀</td>
+                        <td class="highlight">0</td>
+                    </tr>
+                    <tr>
+                        <td>摧毁载具</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>使用时间</td>
+                        <td>0.00 小时</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card-title">空中载具</div>
+            <div class="card-content">
+                <table class="stats-table">
+                    <tr>
+                        <td>击杀</td>
+                        <td class="highlight">4</td>
+                    </tr>
+                    <tr>
+                        <td>摧毁载具</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>使用时间</td>
+                        <td>0.18 小时</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card-title">装甲载具</div>
+            <div class="card-content">
+                <table class="stats-table">
+                    <tr>
+                        <td>击杀</td>
+                        <td class="highlight">109</td>
+                    </tr>
+                    <tr>
+                        <td>摧毁载具</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>使用时间</td>
+                        <td>0.83 小时</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card-title">战马</div>
+            <div class="card-content">
+                <table class="stats-table">
+                    <tr>
+                        <td>击杀</td>
+                        <td class="highlight">0</td>
+                    </tr>
+                    <tr>
+                        <td>摧毁载具</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>使用时间</td>
+                        <td>0.00 小时</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        <div class="card-container">
+            <div class="card-title">运输载具</div>
+            <div class="card-content">
+                <table class="stats-table">
+                    <tr>
+                        <td>击杀</td>
+                        <td class="highlight">0</td>
+                    </tr>
+                    <tr>
+                        <td>摧毁载具</td>
+                        <td>0</td>
+                    </tr>
+                    <tr>
+                        <td>使用时间</td>
+                        <td>0.00 小时</td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+        
+        </div>
+    </div>
+    
+    <div class="section">
+        <h2 class="section-title">详细统计</h2>
+        <div class="grid-container">
+            <div class="card-container" style="grid-column: 1 / -1;">
+                <div class="card-title">战斗数据</div>
+                <div class="card-content">
+                    <div class="summary-grid">
+    
+        <div class="summary-item">
+            <div class="label">救援击杀</div>
+            <div class="value">413</div>
+        </div>
+        
+        <div class="summary-item">
+            <div class="label">复仇击杀</div>
+            <div class="value">285</div>
+        </div>
+        
+        <div class="summary-item">
+            <div class="label">奖励得分</div>
+            <div class="value">2220500</div>
+        </div>
+        
+        <div class="summary-item">
+            <div class="label">额外得分</div>
+            <div class="value">436240</div>
+        </div>
+        
+        <div class="summary-item">
+            <div class="label">小队得分</div>
+            <div class="value">156020</div>
+        </div>
+        
+        <div class="summary-item">
+            <div class="label">收集狗牌</div>
+            <div class="value">14</div>
+        </div>
+        
+        <div class="summary-item">
+            <div class="label">参与回合</div>
+            <div class="value">69</div>
+        </div>
+        
+        <div class="summary-item">
+            <div class="label">旗帜占领</div>
+            <div class="value">49</div>
+        </div>
+        
+        <div class="summary-item">
+            <div class="label">旗帜防守</div>
+            <div class="value">301</div>
+        </div>
+        
+        <div class="summary-item">
+            <div class="label">最远爆头</div>
+            <div class="value">129.13米</div>
+        </div>
+        
+        <div class="summary-item">
+            <div class="label">仇敌击杀</div>
+            <div class="value">48</div>
+        </div>
+        
+        <div class="summary-item">
+            <div class="label">仇敌连杀</div>
+            <div class="value">8</div>
+        </div>
+        
+        <div class="summary-item">
+            <div class="label">治疗次数</div>
+            <div class="value">2350</div>
+        </div>
+        
+        <div class="summary-item">
+            <div class="label">复活次数</div>
+            <div class="value">58</div>
+        </div>
+        
+        <div class="summary-item">
+            <div class="label">修复次数</div>
+            <div class="value">22</div>
+        </div>
+        
+        <div class="summary-item">
+            <div class="label">压制助攻</div>
+            <div class="value">272</div>
+        </div>
+        
+        <div class="summary-item">
+            <div class="label">击杀助攻</div>
+            <div class="value">148</div>
+        </div>
+        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="footer">
+        <p>数据生成时间: 2025-03-22 21:49:34</p>
+    </div>
+    </body>
+    </html>
+    
